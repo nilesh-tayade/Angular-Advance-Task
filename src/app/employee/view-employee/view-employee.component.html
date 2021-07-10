@@ -1,0 +1,28 @@
+<div class="container text-center">
+
+  <mat-card class="example-card mt-5">
+    <mat-card-header>
+      <div mat-card-avatar >    <img class="img-thumbnail" width="150px" src="{{employee.imageUrl}}" alt="Photo of a Shiba Inu">
+      </div>
+      <mat-card-title>{{employee.firstname}}  {{employee.lastname}}</mat-card-title>
+      <mat-card-subtitle>{{employee.email}}</mat-card-subtitle>
+      <mat-card-subtitle>{{employee.username}}</mat-card-subtitle>
+
+    </mat-card-header>
+    <mat-card-content>
+    <p>City:{{employee.address.city}}</p>
+    <p>Zipcode:{{employee.address.zipcode}}</p>
+    <p>State:{{employee.address.state}}</p>
+    <p>Country:{{employee.address.country}}</p>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
+
+  

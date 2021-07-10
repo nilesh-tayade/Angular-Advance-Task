@@ -1,0 +1,26 @@
+<div class="container-fluid">
+
+<div class="row">
+
+<div class="col-md-3">
+<mat-card>
+    <div class="list-group m-2">
+        <button type="button" class="list-group-item list-group-item-action active" routerEmployee="/employee" aria-current="true">
+            <i class="fa fa-user m-2"></i>  Employee
+        </button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/employee/add-employee"><i class="fa fa-plus m-2"></i>Add employee</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/employee/employee-list"><i class="fa fa-list m-2"></i>Employee List</button>
+        <button type="button" class="list-group-item list-group-item-action" routerLink="/employee/upload-image"><i class="fa fa-upload m-2"></i>Upload Image</button>
+
+      </div>
+</mat-card>
+</div>
+
+<div class="col-md-9">
+    <router-outlet></router-outlet>
+</div>
+
+</div>
+
+
+</div>

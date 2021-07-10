@@ -1,0 +1,120 @@
+<mat-card>
+    <h1 class="text-muted text-center">
+        <span>Add employee</span>
+    </h1>
+</mat-card>
+<mat-card class="mt-2">
+
+    <div class="container">
+
+
+        <form [formGroup]="EmployeeForm" (ngSubmit)="onSubmit()">
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput type="text" formControlName="firstname" required name="firstname">
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput type="text" required formControlName="lastname" name="lastname">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" formControlName="email" required name="email">
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" formControlName="username" required name="username">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" formControlName="password" required name="password">
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Image</mat-label>
+                        <input matInput type="text" formControlName="imageUrl" required name="imageurl">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div formGroupName="address">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input matInput type="text" formControlName="city" required name="city">
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Zipcode</mat-label>
+                            <input matInput type="number" formControlName="zipcode" required name="zipcode">
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input matInput type="text" formControlName="state" required name="state">
+                        </mat-form-field>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Country</mat-label>
+                            <input matInput type="text" formControlName="country" required name="country">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <button type="submit" mat-raised-button color="primary" class="btn  btn-block m-2">
+                <span>Add Employee</span>
+            </button>
+
+        </form>
+
+        <button mat-raised-button color="accent" (click)="reset()" class="btn  btn-block m-2">Reset</button>
+
+
+
+    </div>
+
+</mat-card>

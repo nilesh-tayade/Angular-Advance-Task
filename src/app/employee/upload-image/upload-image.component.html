@@ -1,0 +1,23 @@
+<mat-card>
+    <h1 class="text-muted text-center">
+        <span>Update Profile Image</span>
+    </h1>
+  </mat-card>
+
+  <mat-card class="mt-5">
+<div class="container row">
+    <div class="col-md-6 form-group">
+        <input type="file" class="form-control-file" (change)="onFileChanged($event)">
+    </div>
+    <div class="col-md-6">
+        <button type="button"  mat-raised-button color="primary" (click)="onUpload()">Upload</button>
+    </div>
+</div>
+<hr />
+<div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=message>{{message}}</div>
+    </div>
+</div>
+
+</mat-card> 

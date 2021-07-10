@@ -1,0 +1,75 @@
+<mat-card>
+    <h1 class="text-muted text-center">
+        <span>Add employee</span>
+    </h1>
+</mat-card>
+<mat-card class="mt-2">
+
+    <div class="container">
+
+
+        <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput type="text" formControlName="firstname" required name="firstname">
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput type="text" required formControlName="lastname" name="lastname">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>City</mat-label>
+                        <input matInput type="email" formControlName="city" required name="city">
+                    </mat-form-field>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div formArrayName="mobiles">
+                        <div *ngFor="let mobile of studentForm.get('mobiles')['controls']; let i=index" 
+                                    class="panel panel-default">
+                           
+                            <div [formGroupName]="i" >
+                                <mat-form-field  class="example-full-width" appearance="outline">
+                                    <input matInput formControlName="mobileNo" placeholder=" Enter Mobile No" value="">
+                                </mat-form-field>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <button mat-raised-button  color="accent" (click)="addContactNo()">Add New  Number</button>
+
+                </div>
+
+
+
+
+
+
+                <button type="submit" mat-raised-button color="primary" class="btn  btn-block m-2">
+                    <span>Add Employee</span>
+                </button>
+            </div>
+        </form>
+
+
+
+
+    </div>
+
+</mat-card>

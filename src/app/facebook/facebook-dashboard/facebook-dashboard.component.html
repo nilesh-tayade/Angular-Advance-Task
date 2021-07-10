@@ -1,0 +1,26 @@
+<div class="container-fluid">
+
+    <div class="row">
+    
+    <div class="col-md-2">
+    <mat-card>
+        <div class="list-group m-2">
+            <button type="button" class="list-group-item list-group-item-action active" routerLink="/facebook/home">
+                <i class="fa fa-user m-2"></i>  Home
+            </button>
+            <button type="button" class="list-group-item list-group-item-action" routerLink="/facebook/add-user"><i class="fa fa-plus m-2"></i>Add User</button>
+
+            <button type="button" class="list-group-item list-group-item-action" routerLink="/facebook/user-list"><i class="fa fa-plus m-2"></i>User List</button>
+    
+          </div>
+    </mat-card>
+    </div>
+    
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+    
+    </div>
+    
+    
+    </div>
